@@ -1,0 +1,141 @@
+/* Toàn bộ nền */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4a0082, #1e3a8a); /* Sử dụng màu tối hơn cho nền gradient */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Container chính cho bảng câu hỏi */
+.container {
+    max-width: 700px;
+    background: rgba(50, 50, 50, 0.85); /* Nền tối hơn với độ trong suốt */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng đậm hơn */
+    text-align: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Làm mờ nền phía sau bảng */
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f5f5f5; /* Sử dụng màu sáng hơn cho tiêu đề */
+    text-transform: uppercase;
+}
+
+/* Câu hỏi */
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #d1d1d1; /* Màu câu hỏi sáng hơn nhưng vẫn hơi tối */
+}
+
+/* Các lựa chọn đáp án */
+.option {
+    display: block;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 2px solid #555; /* Màu viền tối hơn */
+    background-color: rgba(50, 50, 50, 0.7); /* Nền tối hơn cho đáp án */
+    color: #f5f5f5; /* Màu chữ sáng hơn */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover của đáp án */
+.option:hover {
+    background-color: rgba(70, 70, 70, 0.8); /* Màu hover tối hơn */
+    border-color: #888;
+}
+
+/* Đáp án đúng */
+.option.correct {
+    background-color: rgba(76, 175, 80, 0.8); /* Xanh lá cây mờ nhưng đậm hơn */
+    color: #fff;
+    border-color: rgba(76, 175, 80, 0.8);
+}
+
+/* Đáp án sai */
+.option.incorrect {
+    background-color: rgba(244, 67, 54, 0.8); /* Đỏ mờ nhưng đậm hơn */
+    color: #fff;
+    border-color: rgba(244, 67, 54, 0.8);
+}
+
+/* Nút "Câu tiếp theo" */
+button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #0069d9, #004085); /* Gradient nút đậm hơn */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+    background: linear-gradient(90deg, #004085, #002752);
+}
+
+/* Điều chỉnh trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .option {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+.footer-text {
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px; 
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7); 
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px 15px; 
+    border-radius: 8px; 
+    z-index: 1000; 
+    text-decoration: none;
+}
+
+.footer-text:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); 
+    /* text-decoration: underline;  */
+}
